@@ -1,0 +1,159 @@
+/* GENERAL SETTINGS */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Indie Flower', cursive;
+	color: #000;
+	font-size: 16px;
+	width: 98%;
+	height: 100vh;
+	margin: 0 auto; 
+}
+
+img {
+	/* images source: http://www.freepngimg.com/ */
+	max-width: 100%;
+	object-fit: none;
+}
+
+/* STRUCTURE & REUSABLE */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"orange lemon"
+		"features features"
+		"footer footer";
+	grid-gap: 1%;
+}
+
+.orange, .lemon {
+	display: flex;
+	flex-direction: column;
+	min-height: 250px;
+}
+
+.features {
+	grid-area: features;	
+	display:grid;
+	grid-template-columns:repeat(6, 1fr);
+	grid-gap: 1%;
+}
+
+.footer {
+	grid-area: footer;
+	width: 100%;
+}
+
+h3 {
+	font-family: 'Princess Sofia', cursive;
+	font-size: 3.5rem;
+	letter-spacing: 1.5rem;
+	text-align: center;
+	margin: 2rem 0 1rem;
+}
+
+p {
+	padding: 2rem;
+	line-height: 1.5;
+}
+
+/* ORANGE SIDE*/
+.orange {
+	grid-area: orange;
+	background-color: #ffd600;
+	width: 100%;
+	height: auto;
+}
+
+.orange h3 { text-shadow: 0 0 .5rem #ff9800; }
+
+.orange_photo {
+	padding: 5%;
+	-webkit-shape-outside: circle(50%);
+	/* in development: http://caniuse.com/#search=shape-outside */
+	shape-outside: circle(50%);
+	float: left;
+}
+
+.orange_content p { text-align: right; }
+
+/*LEMON SIDE*/
+.lemon {
+	grid-area: lemon;
+	background-color: #ff9800;
+	width: 100%;
+	height: auto;
+}
+
+.lemon h3 {text-shadow: 0 0 .5rem #ffd600;}
+
+.lemon_photo {
+	padding: 5%;
+	-webkit-shape-outside: circle(50%);
+	/* as above firefox can't properly manage yet */
+	shape-outside: circle(50%);
+	float: right;
+}
+
+.lemon_content p { text-align: left; }
+
+/*FEATURES
+functionalities separate  ->> css/features.css */
+.features .box {
+	font-size: 2.5rem;
+	padding: 1.5rem;
+	max-height: 100px;
+	align-self: center;
+   justify-self: center;
+	cursor: pointer;
+}
+
+.features > div:hover:not(.exclude) {
+	transform: scale(1.2) rotate(-15deg);
+	transition-duration: .3s;
+}
+
+.features > div:nth-child(-n+5):hover {
+	text-shadow: 0px 0px 5px #ff9800;
+}
+
+.features > div:nth-child(n+4):hover {
+	text-shadow: 0px 0px 5px #ffd600;
+}
+
+/*FOOTER*/
+.footer p {
+	border-top: 1px solid black;
+	text-align: right;
+}
+
+/* RESPONSIVENESS */
+@media all and (max-width: 1030px) {
+	
+	.container {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 1%;	
+	}
+	
+	h3 { letter-spacing: 3rem;	}
+}
+
+@media all and (max-width: 600px) {
+	
+	h3 {
+		letter-spacing: 1rem;
+		margin: 20px 10px 5px 10px;
+	}
+	
+	.features {	
+		display: grid;
+		grid-template-columns: 100px 100px 100px ;
+		margin: 0 auto;
+	}
+}
