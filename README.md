@@ -5,4 +5,5 @@ getting started
 * I have added some functionalities using basic jquery and css. Improvements are still needed. 
 * Images compressed via FileOptimizer to improve load times. Animate.css modificated and downsized by myself.
 
+Visit at: https://piotrend.github.io/orangeLemon/
 It's my first project and any advice and suggestions will be greatly appreciated!
