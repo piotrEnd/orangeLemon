@@ -1,9 +1,13 @@
-# orangeLemon
-getting started
+## orangeLemon
+----
+Basic HTML, some CSS animations brought to life by - literally a bit of – jQuery, visual filter effects, css grid mixed with flexbx and responsiveness. Images compressed via FileOptimizer to improve load times. First project published, ever.
 
-* Site basing on css flexbox structure and responsive, although not mobile-first approach. 
-* I have added some functionalities using basic jquery and css. Improvements are still needed. 
-* Images compressed via FileOptimizer to improve load times. Animate.css modificated and downsized by myself.
+Please visit the website >> [here](https://piotrend.github.io/orangeLemon/) <<
 
-Visit at: https://piotrend.github.io/orangeLemon/
-It's my first project and any advice and suggestions will be greatly appreciated!
+> *September, 2017*
+
+| technology stack |
+| --- 		      |
+| HTML 	      |
+| CSS 	 	      |
+| jQuery 	      |
